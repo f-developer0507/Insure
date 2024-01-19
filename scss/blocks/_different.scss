@@ -1,0 +1,131 @@
+.different {
+  margin-bottom: 100px;
+}
+
+.different-row {
+  position: relative;
+
+  color: var(--text-color);
+}
+
+.dark-mode .different-row {
+  color: var(--white-text);
+}
+
+.line {
+  @include line($bg-color: #c396c6);
+}
+
+.dark-mode .line {
+  @include line($bg-color: var(--white),);
+}
+
+.different__title {
+  margin-bottom: 96px;
+
+  font-size: 72px;
+  line-height: 64px;
+  letter-spacing: -1px;
+  font-family: var(--dm-serif-display);
+}
+
+.different__list {
+  @include display($column-gap: 30px);
+}
+
+.different__item {
+  width: 350px;
+  height: 250px;
+}
+
+.different__item__img {
+  margin-bottom: 32px;
+
+  width: 86px;
+  height: 86px;
+}
+
+.different__item:nth-child(1) .different__item__img {
+  background-image: url(../images/different/icon-01.svg);
+}
+
+.different__item:nth-child(2) .different__item__img {
+  background-image: url(../images/different/icon-02.svg);
+}
+
+.different__item:nth-child(3) .different__item__img {
+  background-image: url(../images/different/icon-03.svg);
+}
+
+.different-item__title {
+  margin-bottom: 16px;
+
+  font-family: var(--dm-serif-display);
+  font-size: 28px;
+  letter-spacing: -0.389px;
+}
+
+.different-item__text {
+  font-size: 16px;
+  line-height: 26px;
+
+  color: var(--text-secondry-color);
+}
+
+.dark-mode .different-item__text {
+  color: var(--white-text);
+}
+
+// tablet
+@media (max-width: 950px) {
+  .different-row {
+    @include display(
+      $flex-direction: column,
+      $justify-content: unset,
+      $column-gap: unset
+    );
+  }
+  .different__list {
+    @include display(
+      $flex-direction: column,
+      $justify-content: unset,
+      $column-gap: unset
+    );
+    row-gap: 30px;
+
+    text-align: center;
+  }
+  .different__item__img {
+    margin: auto;
+    margin-bottom: 32px;
+  }
+}
+
+// mobile
+@media (max-width: 510px) {
+  .line {
+    @include line($margin-bottom: 40px, $bg-color: #c396c6);
+  }
+  .different__title {
+    margin-bottom: 80px;
+
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+
+@media (max-width: 370px) {
+  .line {
+    @include line($margin-bottom: 40px, $bg-color: #c396c6);
+  }
+  .different__title {
+    margin-bottom: 55px;
+
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .different__item {
+    width: auto;
+    height: auto;
+  }
+}

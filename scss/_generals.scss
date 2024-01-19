@@ -1,0 +1,21 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+
+  font-family: var(--karla-font);
+
+  transition: all 0.3s ease-in;
+}
+
+.dark-mode {
+  background-color: var(--dark);
+
+  color: var(--white-text);
+}
+
+.dark-mode a {
+  color: var(--white-text);
+}

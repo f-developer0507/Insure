@@ -1,0 +1,97 @@
+:root {
+  --container-width: 1160px;
+  --container-padding: 25px;
+
+  --bg-color: #2d2641;
+  --accent: #2d2641;
+  --dark: #222;
+  --text-color: #2c2830;
+  --white-text: #fff;
+  --white: #fff;
+  --hover-text-color: #2c2830;
+  --text-secondry-color: #837d88;
+  --footer-text-color: #2d2641;
+
+  --karla-font: "Karla", sans-serif;
+  --dm-serif-display: "DM Serif Display";
+}
+
+.none {
+  display: none !important;
+}
+
+@mixin display(
+  $align-items: center,
+  $flex-direction: row,
+  $justify-content: space-between,
+  $column-gap: 25px
+) {
+  display: flex;
+  align-items: $align-items;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  column-gap: $column-gap;
+}
+
+@mixin line(
+  $margin-bottom: 63px,
+  $width: 150px,
+  $height: 1px,
+  $bg-color: #fff
+) {
+  margin-bottom: $margin-bottom;
+
+  width: $width;
+  height: $height;
+
+  display: block;
+
+  background-color: $bg-color;
+}
+
+@mixin button(
+  $padding: 13px 0px 12px,
+  $width: 146px,
+  $height: 40px,
+  $font-size: 13px,
+  $font-weight: 700,
+  $text-transform: uppercase,
+  $letter-spacing: 1.5px,
+  $bg-color: transparent,
+  $hover-bg-color: #2c2830,
+  $color: var(--text-color),
+  $hover-color: #fff,
+  $border: 1px solid #2c2830
+) {
+  padding: $padding;
+
+  width: $width;
+  height: $height;
+
+  @include display(
+    $align-items: center,
+    $justify-content: center,
+    $column-gap: unset
+  );
+
+  font-size: $font-size;
+  font-weight: $font-weight;
+  text-transform: $text-transform;
+  letter-spacing: $letter-spacing;
+
+  border: $border;
+  color: $color;
+  background-color: $bg-color;
+
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    background-color: $hover-bg-color;
+    color: $hover-color;
+  }
+
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+}
