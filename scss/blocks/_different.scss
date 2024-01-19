@@ -103,9 +103,6 @@
 
 // mobile
 @media (max-width: 510px) {
-  .line {
-    @include line($margin-bottom: 40px, $bg-color: #c396c6);
-  }
   .different__title {
     margin-bottom: 80px;
 
@@ -115,9 +112,6 @@
 }
 
 @media (max-width: 370px) {
-  .line {
-    @include line($margin-bottom: 40px, $bg-color: #c396c6);
-  }
   .different__title {
     margin-bottom: 55px;
 

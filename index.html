@@ -3,10 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/animate.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
     <title>Insure</title>
   </head>
   <body>
+    <div class="loader-wrapper">
+      <span class="loader"></span>
+    </div>
     <!-- Site Header start -->
     <header class="site-header">
       <div class="container">
@@ -41,7 +45,7 @@
         <div class="hero">
           <div class="container">
             <div class="hero-row">
-              <div class="hero__content-wrapper">
+              <div class="hero__content-wrapper wow animate__animated animate__backInUp">
                 <span class="line"></span>
                 <h2 class="hero__content__title">
                   Humanizing <br>
@@ -54,7 +58,7 @@
                 </p>
                 <a href="#!" class="hero__content__btn">VIEW PLANS</a>
               </div>
-              <div class="hero__img-wrapper">
+              <div class="hero__img-wrapper wow animate__animated animate__fadeIn">
                 <img src="./images/hero/hero-img.jpg" alt="hero-img.jpg" srcset="./images/hero/hero-img.jpg 1x, ./images/hero/hero-img@2x.jpg 2x">
               </div>
             </div>
@@ -68,7 +72,7 @@
             <span class="line"></span>
             <h2 class="different__title">We’re different</h2>
             <ul class="different__list">
-              <li class="different__item">
+              <li class="different__item wow animate__animated animate__fadeInUp">
                 <div class="different__item__img"></div>
                 <div class="different__item__content different-item">
                   <h3 class="different-item__title">Snappy Process</h3>
@@ -78,7 +82,8 @@
                   </p>
                 </div>
               </li>
-              <li class="different__item">
+
+              <li class="different__item wow animate__animated animate__fadeInUp">
                 <div class="different__item__img"></div>
                 <div class="different__item__content different-item">
                   <h3 class="different-item__title">Affordable Prices</h3>
@@ -89,7 +94,8 @@
                   </p>
                 </div>
               </li>
-              <li class="different__item">
+
+              <li class="different__item wow animate__animated animate__fadeInUp">
                 <div class="different__item__img"></div>
                 <div class="different__item__content different-item">
                   <h3 class="different-item__title">People First</h3>
@@ -106,7 +112,7 @@
 
       <section class="about">
         <div class="container">
-          <div class="about-row">
+          <div class="about-row wow animate__animated animate__zoomIn">
             <h2 class="about__title">
               Find out more <br>
               about how we work
@@ -122,7 +128,7 @@
     <footer class="site-footer">
       <div class="container">
         <div class="footer-row">
-          <div class="footer__top-content">
+          <div class="footer__top-content wow animate__animated animate__fadeInUp">
             <a href="./index.html" class="footer__top__logo"></a>
             <ul class="footer__top__list">
               <li class="footer__top__item">
@@ -139,7 +145,7 @@
               </li>
             </ul>
           </div>
-          <div class="footer__bottom-content">
+          <div class="footer__bottom-content wow animate__animated animate__fadeInUp">
             <ul class="footer__bottom__list">
               <li class="footer__bottom__item">
                 <p class="footer__bottom__badge">OUR COMPANY</p>
@@ -173,6 +179,15 @@
       </div>
     </footer>
     <!-- Footer end -->
+
+    <!-- WOW JS start -->
+    <script src="./js/wow.min.js"></script>
+    <script>
+      // wow js start
+      new WOW().init();
+      // wow js end
+    </script>
+    <!-- WOW JS end -->
     <script src="./js/app.js"></script>
   </body>
 </html>
